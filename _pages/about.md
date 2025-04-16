@@ -10,26 +10,28 @@ redirect_from:
 
 Welcome to Nikolai Rozanov's personal webpage!
 
-* I am a PhD student at [Imperial College London](https://www.imperial.ac.uk/computing), working in the [NLP group](https://nlp.doc.ic.ac.uk) with Dr. [Marek Rei](http://marekrei.com), researching Foundation Models, Reasoning, and AI Agents.
+* I am a PhD student at [Imperial College London](https://www.imperial.ac.uk/computing), working in the [NLP group](https://nlp.doc.ic.ac.uk) with Dr. [Marek Rei](http://marekrei.com), researching LLMs, Reasoning, and AI Agents.
 
-## Introduction
+* I am super interested in AI Reasoning and Agents (LLMs & RL).
 
-I’m an experienced research scientist, engineer, and tech entrepreneur. Most recently, I’ve been a PhD researcher at Imperial College London focusing on LLMs, reasoning, and agentic behavior. Prior to this, I co-founded and led Wluper Ltd. (London-based AI startup) as CTO and Head of Research for 7 years, where I built and productionised cutting-edge AI systems and co-authored papers in top-tier venues.  
+* Fundamentally, I am interested in the meaning of life and metaphysics.
+
+## Summary of Experience
+
+ Previously, I had experience as research scientist, engineer, and tech entrepreneur. Most recently, I am a PhD researcher at Imperial College London focusing on LLMs, reasoning, and agentic behavior. Prior to this, I co-founded and led Wluper Ltd. (London-based AI startup) as CTO and Head of Research for 7 years, where I built and productionised cutting-edge AI systems and co-authored papers in top-tier venues.  
 
 I’ve led multi-disciplinary teams, secured and managed a £500K Innovate UK grant, and collaborated with academic leaders such as Prof. Iryna Gurevych (former ACL president). I also advise and consult on GenAI projects – recently leading LLM-based translation evaluation at Rask AI.  
 
 I speak regularly at conferences (e.g. CogX 2023, Podcast Show 2024), and my goal is to bridge state-of-the-art ML research with practical applications.
 
 ## News
+- [**2024.11**] Presented: *IsoChronoMeter* at **WMT 2024 (EMNLP)** – a metric for evaluating isochronic translation
+<!-- - [**2024.04**] Built evaluation framework and LLM-based translation engine for [Rask AI](https://www.rask.ai/) -->
+- [**2024.07**] Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep
+- [**2024.06**] Speaker at "The Podcast Show" 2024 on AI-powered dubbing at Rask AI
+- [**2023.10**] Started as PhD Candidate at Imperial College London
 
-- [**2025.03**] Accepted to **NAACL 2025** with our work *StateAct: State Tracking and Reasoning for Acting and Planning with LLMs*
-- [**2024.12**] Published: *IsoChronoMeter* at **WMT 2024 (EMNLP)** – a metric for evaluating isochronic translation
-- [**2024.11**] Speaker at "The Podcast Show" 2024 on AI-powered dubbing at Rask AI
-- [**2024.10**] Built evaluation framework and LLM-based translation engine for [Rask AI](https://www.rask.ai/)
-- [**2024.08**] Joined the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as organizer and PhD Rep
-- [**2024.02**] Started as Senior Research Scientist (part-time) at Rask AI, focusing on MT and LLMs
-
-## <a name="Projects"></a> Projects
+<!-- ## <a name="Projects"></a> Projects
 
 - **StateAct**: Chain-of-States reasoning for LLM agents  
   | [Paper (NAACL'25)](https://scholar.google.com/citations?user=fi-feOEAAAAJ) |
@@ -46,16 +48,16 @@ I speak regularly at conferences (e.g. CogX 2023, Podcast Show 2024), and my goa
 
 - **Knowledge Injection in Transformers**  
   Adapter-based world knowledge transfer in pretrained LMs  
-  | [EMNLP'20 - DeeLIO](https://scholar.google.com/citations?user=fi-feOEAAAAJ) |
+  | [EMNLP'20 - DeeLIO](https://scholar.google.com/citations?user=fi-feOEAAAAJ) | -->
 
-## Work Experience
+## Select Work Experience
 
 - **PhD Student, Imperial College London**, *London* (2023–Present)  
-  PhD in Foundation Models, NLP, Reinforcement Learning  
+  PhD in LLMs, LLM Reasoning, LLM Agents  
   Graduate Teaching Assistant for RL, CV, NLP courses  
   PhD Rep and conference organizer (ICC24)
 
-- **Senior Research Scientist @ Rask AI**, *London* (2024)  
+- **Senior Research Scientist @ Rask AI (part time)**, *London* (2024)  
   Led LLM-based MT and evaluation  
   Speaker at industry events (e.g., EMNLP, The Podcast Show)
 
@@ -64,26 +66,33 @@ I speak regularly at conferences (e.g. CogX 2023, Podcast Show 2024), and my goa
   Managed £500K Innovate UK grant and partnerships with top research labs
 
 - **Research Internships**:  
-  - Machine Vision & Monte Carlo Methods @ Imperial College  
-  - Software Engineering @ Rezonence  
-  - Banking & Accounting Internships in Vienna
+  - Machine Vision & Monte Carlo Methods @ Imperial College (2015,2016) 
+  - Software Engineering @ Rezonence (2016)
+
+see my **[CV](https://nikolairozanov.com/files/CV_NikolaiRozanov_April_2025.pdf)** for more details...
 
 ## Selected Publications (see full list on [Google Scholar](https://scholar.google.com/citations?user=fi-feOEAAAAJ&hl=en))
 
 1. **StateAct: State Tracking and Reasoning with LLMs**  
    *REALM @ ACL 2025 (under review)*
+    | [Paper](https://arxiv.org/abs/2410.02810), [Code](https://github.com/stateact) |
 
 2. **IsoChronoMeter: Isochronic Translation Metric**  
    *WMT 2024 @ EMNLP*
+  | [Paper](https://arxiv.org/abs/2410.11127)|
 
 3. **Learning from Free-Text Human Feedback**  
    *EMNLP 2023*
-
-4. **Self-Alignment for Autoencoders**  
-   *ICMLA 2022*
+  | [Paper](https://arxiv.org/abs/2310.15758)|
 
 5. **Adapter-Based Knowledge Injection**  
    *EMNLP 2020 (DeeLIO)*
+  | [Paper](https://arxiv.org/abs/2410.11127)|
+
+5. **Evolutionary Data Measures**  
+   *CoNLL 2018*
+  | [Paper](https://arxiv.org/abs/1811.01910), [Code](https://github.com/ai-nikolai/edm) |
+
 
 …more on [Google Scholar](https://scholar.google.com/citations?user=fi-feOEAAAAJ)
 
@@ -91,7 +100,7 @@ I speak regularly at conferences (e.g. CogX 2023, Podcast Show 2024), and my goa
  
 - **2024** – Speaker @ The Podcast Show (London)  
 - **2023** – Speaker @ CogX Conference (London)  
-- **2022** – Plug and Play Accelerator (Voice AI)
+- **2022** – Plug and Play Accelerator - Voice AI (Bay Area, remote)
 
 ## Hobbies and other achievements
 
