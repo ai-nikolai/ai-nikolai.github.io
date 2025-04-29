@@ -150,7 +150,8 @@ analytics:
   provider               :  "google-analytics-4" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :  "G-N61Q6803EK"
-
+  google-analytics-4:
+    tracking_id          :  "G-N61Q6803EK"
 
 # Reading Files
 include:

@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "About me"
-excerpt: "About me"
+title: "Nikolai Rozanov's Personal Page"
+excerpt: "Nikolai Rozanov's Personal Page"
 author_profile: true
 redirect_from: 
   - /about/
