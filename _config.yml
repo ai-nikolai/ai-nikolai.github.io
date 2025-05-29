@@ -59,7 +59,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : nikolai-rozanov-ai
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -159,6 +159,7 @@ include:
   - _pages
   - files
 exclude:
+  - archive
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

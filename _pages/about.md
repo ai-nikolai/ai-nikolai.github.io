@@ -25,6 +25,7 @@ I’ve led multi-disciplinary teams, secured and managed a £500K Innovate UK gr
 I speak regularly at conferences (e.g. CogX 2023, Podcast Show 2024), and my goal is to bridge state-of-the-art ML research with practical applications.
 
 ## News
+- [**2025.05**] Accepted: **StateAct** was accepted at **REALM25 @ ACL25** - a new state-of-the-art [base agent](https://arxiv.org/abs/2410.02810).
 - [**2024.11**] Presented: *IsoChronoMeter* at **WMT 2024 (EMNLP)** – a metric for evaluating isochronic translation
 <!-- - [**2024.04**] Built evaluation framework and LLM-based translation engine for [Rask AI](https://www.rask.ai/) -->
 - [**2024.07**] Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep
