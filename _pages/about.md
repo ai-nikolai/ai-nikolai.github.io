@@ -70,7 +70,7 @@ I speak regularly at conferences (e.g. CogX 2023, Podcast Show 2024), and my goa
   - Machine Vision & Monte Carlo Methods @ Imperial College (2015,2016) 
   - Software Engineering @ Rezonence (2016)
 
-see my **[CV](https://nikolairozanov.com/files/CV_NikolaiRozanov_April_2025.pdf)** for more details...
+see my **[CV](https://nikolairozanov.com/files/CV_NikolaiRozanov_May_2025.pdf)** for more details...
 
 ## Selected Publications (see full list on [Google Scholar](https://scholar.google.com/citations?user=fi-feOEAAAAJ&hl=en))
 
