@@ -1,0 +1,131 @@
+---
+layout: none
+permalink: /game-of-life/
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game of Life - Custom Rules</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 1em;
+      background: #f0f0f0;
+    }
+    canvas {
+      border: 1px solid #333;
+      margin-top: 1em;
+    }
+    textarea {
+      width: 300px;
+      height: 100px;
+    }
+    button {
+      margin-top: 0.5em;
+      padding: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Game of Life (Custom Rules)</h1>
+
+  <textarea id="ruleInput">{
+  "survive": [2, 3],
+  "born": [3]
+}</textarea>
+  <br />
+  <button onclick="resetRules()">Apply Rules</button>
+  <button onclick="randomizeGrid()">Randomize</button>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    const size = 50;
+    const cellSize = canvas.width / size;
+    let grid = Array.from({ length: size }, () => Array(size).fill(0));
+    let rules = { survive: [2, 3], born: [3] };
+
+    function drawGrid() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+          ctx.fillStyle = grid[y][x] ? "#333" : "#fff";
+          ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        }
+      }
+    }
+
+    function nextGeneration() {
+      const newGrid = grid.map((row, y) =>
+        row.map((cell, x) => {
+          const neighbors = countNeighbors(x, y);
+          if (cell && rules.survive.includes(neighbors)) return 1;
+          if (!cell && rules.born.includes(neighbors)) return 1;
+          return 0;
+        })
+      );
+      grid = newGrid;
+      drawGrid();
+    }
+
+    function countNeighbors(x, y) {
+      let count = 0;
+      for (let dy = -1; dy <= 1; dy++) {
+        for (let dx = -1; dx <= 1; dx++) {
+          if (dx === 0 && dy === 0) continue;
+          const nx = x + dx;
+          const ny = y + dy;
+          if (nx >= 0 && nx < size && ny >= 0 && ny < size) {
+            count += grid[ny][nx];
+          }
+        }
+      }
+      return count;
+    }
+
+    function gameLoop() {
+      nextGeneration();
+      requestAnimationFrame(() => setTimeout(gameLoop, 200));
+    }
+
+    function resetRules() {
+      try {
+        const input = document.getElementById("ruleInput").value;
+        const parsed = JSON.parse(input);
+        if (Array.isArray(parsed.survive) && Array.isArray(parsed.born)) {
+          rules = parsed;
+        } else {
+          alert("Invalid rule format. Must contain 'survive' and 'born' arrays.");
+        }
+      } catch (e) {
+        alert("Invalid JSON");
+      }
+    }
+
+    function randomizeGrid() {
+      grid = Array.from({ length: size }, () =>
+        Array.from({ length: size }, () => (Math.random() > 0.7 ? 1 : 0))
+      );
+      drawGrid();
+    }
+
+    canvas.addEventListener("click", (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = Math.floor((e.clientX - rect.left) / cellSize);
+      const y = Math.floor((e.clientY - rect.top) / cellSize);
+      grid[y][x] = grid[y][x] ? 0 : 1;
+      drawGrid();
+    });
+
+    randomizeGrid();
+    gameLoop();
+  </script>
+</body>
+</html>
