@@ -6,8 +6,8 @@ permalink: /game-of-life/
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game of Life - Custom Rules</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Easter Egg: Game of Life</title>
   <style>
     body {
       font-family: sans-serif;
@@ -21,29 +21,82 @@ permalink: /game-of-life/
     canvas {
       border: 1px solid #333;
       margin-top: 1em;
+      cursor: pointer;
     }
     textarea {
       width: 300px;
       height: 100px;
+      font-family: monospace;
+      font-size: 14px;
     }
     button {
+      margin: 0.3em 0.5em 0.3em 0;
+      padding: 0.5em 1em;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #settings {
+      border: 1px solid #aaa;
+      background: #fff;
+      padding: 1em;
+      margin-top: 1em;
+      width: 320px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    #description {
+      background: #eef;
+      border: 1px solid #99c;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      cursor: pointer;
+      user-select: none;
+      font-size: 14px;
+      width: 300px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    #descContent {
+      font-size: 13px;
       margin-top: 0.5em;
+      color: #333;
+      display: none;
+      text-align: left;
+      background: #f8faff;
+      border-radius: 4px;
       padding: 0.5em;
     }
   </style>
 </head>
 <body>
-  <h1>Game of Life (Custom Rules)</h1>
+  <h1>Game of Life</h1>
 
-  <textarea id="ruleInput">{
+
+
+
+  <button id="randomizeBtn">Randomize</button>
+  <button id="clearBtn">Make Empty Grid</button>
+  <button id="startBtn">Start</button>
+  <button id="stopBtn" disabled>Stop</button>
+  <canvas id="gameCanvas" width="400" height="400" aria-label="Game of Life grid"></canvas>
+  
+  <button id="toggleSettingsBtn">Collapse Settings</button>
+
+  <div id="settings">
+    <textarea id="ruleInput">{
   "survive": [2, 3],
   "born": [3]
 }</textarea>
-  <br />
-  <button onclick="resetRules()">Apply Rules</button>
-  <button onclick="randomizeGrid()">Randomize</button>
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
-
+    <br />
+    <button id="applyRulesBtn">Apply Rules</button>
+  </div>
+  <div id="description" tabindex="0" aria-expanded="false" role="button">
+    What are the rules? (click to toggle)
+    <div id="descContent" aria-hidden="true">
+      <p><strong>Survive:</strong> Number of neighbors that allow a live cell to survive.</p>
+      <p><strong>Born:</strong> Number of neighbors that cause a dead cell to become alive.</p>
+      <p>Customize these arrays in JSON, e.g. <code>{"survive": [2, 3], "born": [3]}</code> is the classic Conway's rules.</p>
+    </div>
+  </div>
   <script>
     const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
@@ -51,7 +104,10 @@ permalink: /game-of-life/
     const cellSize = canvas.width / size;
     let grid = Array.from({ length: size }, () => Array(size).fill(0));
     let rules = { survive: [2, 3], born: [3] };
+    let running = false;
+    let animationId;
 
+    // Draw grid on canvas
     function drawGrid() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let y = 0; y < size; y++) {
@@ -62,6 +118,7 @@ permalink: /game-of-life/
       }
     }
 
+    // Compute next generation
     function nextGeneration() {
       const newGrid = grid.map((row, y) =>
         row.map((cell, x) => {
@@ -75,6 +132,7 @@ permalink: /game-of-life/
       drawGrid();
     }
 
+    // Count neighbors for a cell
     function countNeighbors(x, y) {
       let count = 0;
       for (let dy = -1; dy <= 1; dy++) {
@@ -90,25 +148,47 @@ permalink: /game-of-life/
       return count;
     }
 
+    // Game loop with control for running/paused
     function gameLoop() {
+      if (!running) return;
       nextGeneration();
-      requestAnimationFrame(() => setTimeout(gameLoop, 200));
+      animationId = setTimeout(() => requestAnimationFrame(gameLoop), 200);
     }
 
+    // Toggle start/stop buttons and running flag
+    function startGame() {
+      if (!running) {
+        running = true;
+        document.getElementById("startBtn").disabled = true;
+        document.getElementById("stopBtn").disabled = false;
+        gameLoop();
+      }
+    }
+
+    function stopGame() {
+      running = false;
+      document.getElementById("startBtn").disabled = false;
+      document.getElementById("stopBtn").disabled = true;
+      if(animationId) clearTimeout(animationId);
+    }
+
+    // Apply rules from textarea JSON input
     function resetRules() {
       try {
         const input = document.getElementById("ruleInput").value;
         const parsed = JSON.parse(input);
         if (Array.isArray(parsed.survive) && Array.isArray(parsed.born)) {
           rules = parsed;
+          alert("Rules updated successfully.");
         } else {
           alert("Invalid rule format. Must contain 'survive' and 'born' arrays.");
         }
       } catch (e) {
-        alert("Invalid JSON");
+        alert("Invalid JSON: " + e.message);
       }
     }
 
+    // Randomize grid cells
     function randomizeGrid() {
       grid = Array.from({ length: size }, () =>
         Array.from({ length: size }, () => (Math.random() > 0.7 ? 1 : 0))
@@ -116,6 +196,13 @@ permalink: /game-of-life/
       drawGrid();
     }
 
+    // Clear grid cells (make empty)
+    function clearGrid() {
+      grid = Array.from({ length: size }, () => Array(size).fill(0));
+      drawGrid();
+    }
+
+    // Toggle cell on click
     canvas.addEventListener("click", (e) => {
       const rect = canvas.getBoundingClientRect();
       const x = Math.floor((e.clientX - rect.left) / cellSize);
@@ -124,8 +211,56 @@ permalink: /game-of-life/
       drawGrid();
     });
 
+    // Toggle settings collapse
+    const settingsDiv = document.getElementById("settings");
+    const toggleSettingsBtn = document.getElementById("toggleSettingsBtn");
+    let settingsCollapsed = true;
+    toggleSettingsBtn.addEventListener("click", () => {
+      settingsCollapsed = !settingsCollapsed;
+      if (settingsCollapsed) {
+        settingsDiv.style.display = "none";
+        toggleSettingsBtn.textContent = "Expand Settings";
+      } else {
+        settingsDiv.style.display = "block";
+        toggleSettingsBtn.textContent = "Collapse Settings";
+      }
+    });
+
+    // Toggle description collapse
+    const description = document.getElementById("description");
+    const descContent = document.getElementById("descContent");
+    description.addEventListener("click", () => {
+      const isHidden = descContent.style.display === "none" || descContent.style.display === "";
+      descContent.style.display = isHidden ? "block" : "none";
+      description.setAttribute("aria-expanded", isHidden ? "true" : "false");
+      descContent.setAttribute("aria-hidden", isHidden ? "false" : "true");
+    });
+    // Initially collapsed
+    descContent.style.display = "none";
+    description.setAttribute("aria-expanded", "false");
+    descContent.setAttribute("aria-hidden", "true");
+
+    // Buttons event listeners
+    document.getElementById("applyRulesBtn").addEventListener("click", () => {
+      resetRules();
+      drawGrid();
+    });
+    document.getElementById("randomizeBtn").addEventListener("click", () => {
+      randomizeGrid();
+    });
+    document.getElementById("clearBtn").addEventListener("click", () => {
+      clearGrid();
+    });
+    document.getElementById("startBtn").addEventListener("click", () => {
+      startGame();
+    });
+    document.getElementById("stopBtn").addEventListener("click", () => {
+      stopGame();
+    });
+
+    // Initial draw and random grid
     randomizeGrid();
-    gameLoop();
+    drawGrid();
   </script>
 </body>
 </html>
