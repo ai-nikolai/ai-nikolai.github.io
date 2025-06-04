@@ -3,100 +3,330 @@ layout: none
 permalink: /game-of-life/
 ---
 
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Easter Egg: Game of Life</title>
+  <title>Game of Life</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0;
-      padding: 1em;
-      background: #f0f0f0;
+      padding: 2rem;
+      /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+      min-height: 100vh;
+      color: #333;
     }
-    canvas {
-      border: 1px solid #333;
-      margin-top: 1em;
-      cursor: pointer;
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
     }
-    textarea {
-      width: 300px;
-      height: 100px;
-      font-family: monospace;
-      font-size: 14px;
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+      text-decoration: none;
     }
+
+    h1 a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #buttonGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
     button {
-      margin: 0.3em 0.5em 0.3em 0;
-      padding: 0.5em 1em;
-      font-size: 14px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(45deg, #4CAF50, #45a049);
+      box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
     }
-    #settings {
-      border: 1px solid #aaa;
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button:disabled {
+      background: linear-gradient(45deg, #9e9e9e, #757575);
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: 0 2px 8px rgba(158, 158, 158, 0.2);
+    }
+
+    button:disabled::before {
+      display: none;
+    }
+
+    #stopBtn {
+      background: linear-gradient(45deg, #f44336, #d32f2f);
+      box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
+    }
+
+    #stopBtn:hover {
+      box-shadow: 0 8px 25px rgba(244, 67, 54, 0.4);
+    }
+
+    canvas {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
       background: #fff;
-      padding: 1em;
-      margin-top: 1em;
-      width: 320px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      aspect-ratio: 1;
+      display: block;
+      margin: 0 auto;
     }
-    #description {
-      background: #eef;
-      border: 1px solid #99c;
-      padding: 0.5em;
-      margin-bottom: 1em;
+
+    /* canvas:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    } */
+
+    .toggle-btn {
+      background: linear-gradient(45deg, #2196F3, #1976D2) !important;
+      box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3) !important;
+      margin: 1rem 0;
+      width: 100%;
+    }
+
+    .toggle-btn:hover {
+      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4) !important;
+    }
+
+    .collapsible-section {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      margin: 1rem 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .section-header {
+      background: rgba(33, 150, 243, 0.1);
+      padding: 1rem 1.5rem;
       cursor: pointer;
       user-select: none;
-      font-size: 14px;
-      width: 300px;
-      text-align: center;
-      border-radius: 4px;
+      font-weight: 600;
+      color: #1976D2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
     }
-    #descContent {
-      font-size: 13px;
-      margin-top: 0.5em;
-      color: #333;
+
+    .section-header:hover {
+      background: rgba(33, 150, 243, 0.2);
+    }
+
+    .section-content {
+      padding: 1.5rem;
       display: none;
-      text-align: left;
-      background: #f8faff;
+      animation: slideDown 0.3s ease;
+    }
+
+    .section-content.show {
+      display: block;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chevron {
+      transition: transform 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    .chevron.rotated {
+      transform: rotate(180deg);
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 14px;
+      padding: 1rem;
+      border: 2px solid rgba(33, 150, 243, 0.3);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.9);
+      resize: vertical;
+      transition: all 0.3s ease;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #2196F3;
+      box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+    }
+
+    .rules-container {
+      margin-bottom: 1rem;
+    }
+
+    .rules-label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #1976D2;
+    }
+
+    .description-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .description-text p {
+      margin: 0.5rem 0;
+    }
+
+    .description-text strong {
+      color: #1976D2;
+    }
+
+    .description-text code {
+      background: rgba(33, 150, 243, 0.1);
+      padding: 0.2rem 0.4rem;
       border-radius: 4px;
-      padding: 0.5em;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      
+      .container {
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      #buttonGrid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Game of Life</h1>
+  <div class="container">
+    <h1><a href="/about">Game of Life</a></h1>
 
+    <div id="buttonGrid">
+      <button id="randomizeBtn">🎲 Randomize</button>
+      <button id="clearBtn">🧹 Clear Grid</button>
+      <button id="startBtn">▶️ Start</button>
+      <button id="stopBtn" disabled>⏸️ Stop</button>
+    </div>
 
-
-
-  <button id="randomizeBtn">Randomize</button>
-  <button id="clearBtn">Make Empty Grid</button>
-  <button id="startBtn">Start</button>
-  <button id="stopBtn" disabled>Stop</button>
-  <canvas id="gameCanvas" width="400" height="400" aria-label="Game of Life grid"></canvas>
-  
-  <button id="toggleSettingsBtn">Collapse Settings</button>
-
-  <div id="settings">
-    <textarea id="ruleInput">{
+    <canvas id="gameCanvas" width="400" height="400" aria-label="Game of Life grid"></canvas>
+    
+    <div class="collapsible-section">
+      <div class="section-header" id="settingsHeader" tabindex="0" role="button" aria-expanded="false">
+        <span>⚙️ Settings</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="section-content" id="settingsContent" aria-hidden="true">
+        <div class="rules-container">
+          <div class="rules-label">Game Rules (JSON format):</div>
+          <textarea id="ruleInput" aria-label="Game rules in JSON format">{
   "survive": [2, 3],
   "born": [3]
 }</textarea>
-    <br />
-    <button id="applyRulesBtn">Apply Rules</button>
-  </div>
-  <div id="description" tabindex="0" aria-expanded="false" role="button">
-    What are the rules? (click to toggle)
-    <div id="descContent" aria-hidden="true">
-      <p><strong>Survive:</strong> Number of neighbors that allow a live cell to survive.</p>
-      <p><strong>Born:</strong> Number of neighbors that cause a dead cell to become alive.</p>
-      <p>Customize these arrays in JSON, e.g. <code>{"survive": [2, 3], "born": [3]}</code> is the classic Conway's rules.</p>
+        </div>
+        <button id="applyRulesBtn">✅ Apply Rules</button>
+      </div>
+    </div>
+
+    <div class="collapsible-section">
+      <div class="section-header" id="descriptionHeader" tabindex="0" role="button" aria-expanded="false">
+        <span>❓ How it works</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="section-content" id="descriptionContent" aria-hidden="true">
+        <div class="description-text">
+          <p><strong>Survive:</strong> Number of neighbors that allow a live cell to survive to the next generation.</p>
+          <p><strong>Born:</strong> Number of neighbors that cause a dead cell to become alive in the next generation.</p>
+          <p>The classic Conway's Game of Life uses <code>{"survive": [2, 3], "born": [3]}</code> which means:</p>
+          <ul>
+            <li>A live cell survives if it has 2 or 3 neighbors</li>
+            <li>A dead cell becomes alive if it has exactly 3 neighbors</li>
+          </ul>
+          <p><strong>How to play:</strong> Click cells on the grid to toggle them, then press Start to watch the simulation evolve!</p>
+        </div>
+      </div>
     </div>
   </div>
+
   <script>
     const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
@@ -107,13 +337,38 @@ permalink: /game-of-life/
     let running = false;
     let animationId;
 
-    // Draw grid on canvas
+    // Draw grid on canvas with improved styling
     function drawGrid() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw grid lines
+      ctx.strokeStyle = "#f0f0f0";
+      ctx.lineWidth = 0.5;
+      for (let i = 0; i <= size; i++) {
+        ctx.beginPath();
+        ctx.moveTo(i * cellSize, 0);
+        ctx.lineTo(i * cellSize, canvas.height);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(0, i * cellSize);
+        ctx.lineTo(canvas.width, i * cellSize);
+        ctx.stroke();
+      }
+      
+      // Draw cells
       for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
-          ctx.fillStyle = grid[y][x] ? "#333" : "#fff";
-          ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+          if (grid[y][x]) {
+            const gradient = ctx.createLinearGradient(
+              x * cellSize, y * cellSize,
+              (x + 1) * cellSize, (y + 1) * cellSize
+            );
+            gradient.addColorStop(0, "#667eea");
+            gradient.addColorStop(1, "#764ba2");
+            ctx.fillStyle = gradient;
+            ctx.fillRect(x * cellSize + 1, y * cellSize + 1, cellSize - 2, cellSize - 2);
+          }
         }
       }
     }
@@ -148,14 +403,14 @@ permalink: /game-of-life/
       return count;
     }
 
-    // Game loop with control for running/paused
+    // Game loop
     function gameLoop() {
       if (!running) return;
       nextGeneration();
-      animationId = setTimeout(() => requestAnimationFrame(gameLoop), 200);
+      animationId = setTimeout(() => requestAnimationFrame(gameLoop), 150);
     }
 
-    // Toggle start/stop buttons and running flag
+    // Start game
     function startGame() {
       if (!running) {
         running = true;
@@ -165,6 +420,7 @@ permalink: /game-of-life/
       }
     }
 
+    // Stop game
     function stopGame() {
       running = false;
       document.getElementById("startBtn").disabled = false;
@@ -172,23 +428,64 @@ permalink: /game-of-life/
       if(animationId) clearTimeout(animationId);
     }
 
-    // Apply rules from textarea JSON input
+    // Apply rules from textarea
     function resetRules() {
       try {
         const input = document.getElementById("ruleInput").value;
         const parsed = JSON.parse(input);
         if (Array.isArray(parsed.survive) && Array.isArray(parsed.born)) {
           rules = parsed;
-          alert("Rules updated successfully.");
+          // Create a toast-like notification
+          showNotification("Rules updated successfully! 🎉", "success");
         } else {
-          alert("Invalid rule format. Must contain 'survive' and 'born' arrays.");
+          showNotification("Invalid rule format. Must contain 'survive' and 'born' arrays.", "error");
         }
       } catch (e) {
-        alert("Invalid JSON: " + e.message);
+        showNotification("Invalid JSON: " + e.message, "error");
       }
     }
 
-    // Randomize grid cells
+    // Simple notification system
+    function showNotification(message, type) {
+      const notification = document.createElement('div');
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        color: white;
+        font-weight: 600;
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+        max-width: 300px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        ${type === 'success' ? 'background: linear-gradient(45deg, #4CAF50, #45a049);' : 'background: linear-gradient(45deg, #f44336, #d32f2f);'}
+      `;
+      notification.textContent = message;
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+      }, 3000);
+    }
+
+    // Add CSS for notifications
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(100%); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Randomize grid
     function randomizeGrid() {
       grid = Array.from({ length: size }, () =>
         Array.from({ length: size }, () => (Math.random() > 0.7 ? 1 : 0))
@@ -196,7 +493,7 @@ permalink: /game-of-life/
       drawGrid();
     }
 
-    // Clear grid cells (make empty)
+    // Clear grid
     function clearGrid() {
       grid = Array.from({ length: size }, () => Array(size).fill(0));
       drawGrid();
@@ -205,60 +502,57 @@ permalink: /game-of-life/
     // Toggle cell on click
     canvas.addEventListener("click", (e) => {
       const rect = canvas.getBoundingClientRect();
-      const x = Math.floor((e.clientX - rect.left) / cellSize);
-      const y = Math.floor((e.clientY - rect.top) / cellSize);
-      grid[y][x] = grid[y][x] ? 0 : 1;
-      drawGrid();
-    });
-
-    // Toggle settings collapse
-    const settingsDiv = document.getElementById("settings");
-    const toggleSettingsBtn = document.getElementById("toggleSettingsBtn");
-    let settingsCollapsed = true;
-    toggleSettingsBtn.addEventListener("click", () => {
-      settingsCollapsed = !settingsCollapsed;
-      if (settingsCollapsed) {
-        settingsDiv.style.display = "none";
-        toggleSettingsBtn.textContent = "Expand Settings";
-      } else {
-        settingsDiv.style.display = "block";
-        toggleSettingsBtn.textContent = "Collapse Settings";
+      const x = Math.floor((e.clientX - rect.left) * canvas.width / rect.width / cellSize);
+      const y = Math.floor((e.clientY - rect.top) * canvas.height / rect.height / cellSize);
+      if (x >= 0 && x < size && y >= 0 && y < size) {
+        grid[y][x] = grid[y][x] ? 0 : 1;
+        drawGrid();
       }
     });
 
-    // Toggle description collapse
-    const description = document.getElementById("description");
-    const descContent = document.getElementById("descContent");
-    description.addEventListener("click", () => {
-      const isHidden = descContent.style.display === "none" || descContent.style.display === "";
-      descContent.style.display = isHidden ? "block" : "none";
-      description.setAttribute("aria-expanded", isHidden ? "true" : "false");
-      descContent.setAttribute("aria-hidden", isHidden ? "false" : "true");
-    });
-    // Initially collapsed
-    descContent.style.display = "none";
-    description.setAttribute("aria-expanded", "false");
-    descContent.setAttribute("aria-hidden", "true");
+    // Collapsible sections functionality
+    function setupCollapsibleSection(headerId, contentId) {
+      const header = document.getElementById(headerId);
+      const content = document.getElementById(contentId);
+      const chevron = header.querySelector('.chevron');
+      
+      header.addEventListener("click", () => {
+        const isVisible = content.classList.contains('show');
+        
+        if (isVisible) {
+          content.classList.remove('show');
+          header.setAttribute("aria-expanded", "false");
+          content.setAttribute("aria-hidden", "true");
+          chevron.classList.remove('rotated');
+        } else {
+          content.classList.add('show');
+          header.setAttribute("aria-expanded", "true");
+          content.setAttribute("aria-hidden", "false");
+          chevron.classList.add('rotated');
+        }
+      });
 
-    // Buttons event listeners
-    document.getElementById("applyRulesBtn").addEventListener("click", () => {
-      resetRules();
-      drawGrid();
-    });
-    document.getElementById("randomizeBtn").addEventListener("click", () => {
-      randomizeGrid();
-    });
-    document.getElementById("clearBtn").addEventListener("click", () => {
-      clearGrid();
-    });
-    document.getElementById("startBtn").addEventListener("click", () => {
-      startGame();
-    });
-    document.getElementById("stopBtn").addEventListener("click", () => {
-      stopGame();
-    });
+      // Keyboard support
+      header.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          header.click();
+        }
+      });
+    }
 
-    // Initial draw and random grid
+    // Setup collapsible sections
+    setupCollapsibleSection('settingsHeader', 'settingsContent');
+    setupCollapsibleSection('descriptionHeader', 'descriptionContent');
+
+    // Button event listeners
+    document.getElementById("applyRulesBtn").addEventListener("click", resetRules);
+    document.getElementById("randomizeBtn").addEventListener("click", randomizeGrid);
+    document.getElementById("clearBtn").addEventListener("click", clearGrid);
+    document.getElementById("startBtn").addEventListener("click", startGame);
+    document.getElementById("stopBtn").addEventListener("click", stopGame);
+
+    // Initialize
     randomizeGrid();
     drawGrid();
   </script>
