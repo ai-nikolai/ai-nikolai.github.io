@@ -240,6 +240,59 @@ permalink: /game-of-life/
       letter-spacing: 1px;
     }
 
+    .speed-container {
+      margin-bottom: 1rem;
+    }
+
+    .speed-slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 0;
+      background: #333;
+      outline: none;
+      border: 2px solid #00ff00;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .speed-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 0;
+      background: #00ff00;
+      cursor: pointer;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px #00ff00;
+    }
+
+    .speed-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 0;
+      background: #00ff00;
+      cursor: pointer;
+      border: 2px solid #000;
+      box-shadow: 0 0 10px #00ff00;
+    }
+
+    .speed-display {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #00ff00;
+      margin-top: 0.5rem;
+    }
+
+    .speed-value {
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ff00;
+    }
+
     .description-text {
       font-size: 14px;
       line-height: 1.6;
@@ -307,6 +360,15 @@ permalink: /game-of-life/
         <span class="chevron">▼</span>
       </div>
       <div class="section-content" id="settingsContent" aria-hidden="true">
+        <div class="speed-container">
+          <div class="rules-label">Simulation Speed:</div>
+          <input type="range" id="speedSlider" class="speed-slider" min="1" max="10" value="5" step="1" aria-label="Simulation speed control">
+          <div class="speed-display">
+            <span>Slow (1x)</span>
+            <span class="speed-value" id="speedValue">5x</span>
+            <span>Fast (10x)</span>
+          </div>
+        </div>
         <div class="rules-container">
           <div class="rules-label">Game Rules (JSON format):</div>
           <textarea id="ruleInput" aria-label="Game rules in JSON format">{
@@ -348,6 +410,13 @@ permalink: /game-of-life/
     let running = false;
     let animationId;
     let generation = 0;
+    let speed = 5; // Speed multiplier (1-10)
+
+    // Calculate delay based on speed setting
+    function getDelay() {
+      // Speed 1 = 500ms, Speed 10 = 50ms
+      return Math.max(50, 550 - (speed * 50));
+    }
 
     // Draw grid on canvas with retro styling
     function drawGrid() {
@@ -426,7 +495,7 @@ permalink: /game-of-life/
     function gameLoop() {
       if (!running) return;
       nextGeneration();
-      animationId = setTimeout(() => requestAnimationFrame(gameLoop), 150);
+      animationId = setTimeout(() => requestAnimationFrame(gameLoop), getDelay());
     }
 
     // Start game
@@ -474,6 +543,16 @@ permalink: /game-of-life/
       } catch (e) {
         showNotification("Invalid JSON: " + e.message, "error");
       }
+    }
+
+    // Update speed setting
+    function updateSpeed() {
+      const slider = document.getElementById("speedSlider");
+      const speedValue = document.getElementById("speedValue");
+      speed = parseInt(slider.value);
+      speedValue.textContent = `${speed}x`;
+      
+      // showNotification(`Speed updated to ${speed}x! ⚡`, "success");
     }
 
     // Simple notification system
@@ -586,6 +665,7 @@ permalink: /game-of-life/
     document.getElementById("clearBtn").addEventListener("click", clearGrid);
     document.getElementById("startBtn").addEventListener("click", startGame);
     document.getElementById("stopBtn").addEventListener("click", stopGame);
+    document.getElementById("speedSlider").addEventListener("input", updateSpeed);
 
     // Initialize
     randomizeGrid();
