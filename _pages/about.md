@@ -7,6 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<!-- Bismillahi Rahmani Raheem -->
 
 Welcome to Nikolai Rozanov's personal webpage!
 
