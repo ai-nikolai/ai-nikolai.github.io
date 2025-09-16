@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Nikolai Rozanov"
 title_separator          : "-"
 name                     : &name "Nikolai Rozanov"
-description              : &description "CS PhD Candidate in LLM Agents & Reasoning @ Imperial College London"
+description              : &description "CS PhD Candidate in LLM Agents & Reasoning @ Imperial College London. Previously Co-Founder & CTO of a London based research start-up."
 url                      : https://nikolairozanov.com # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ai-nikolai/ai-nikolai.github.io"
@@ -136,7 +136,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  https://nikolairozanov.com/img/profile_pic.png # Open Graph/Twitter default site image
+og_image                 : "profile_pic.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
