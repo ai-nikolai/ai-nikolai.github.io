@@ -119,10 +119,10 @@ see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2025.pdf)** fo
   Early Researcher Grant from OpenAI to develop LLM Agents
 
 - 🏅 **NeurIPS Reviewer Award** (2024)  
-  Free attendance of NeurIPS Conference
+  <!-- Free attendance of NeurIPS Conference -->
 
 - 🏅 **ICML Reviewer Award** (2022)  
-  Free attendance of ICML Conference
+  <!-- Free attendance of ICML Conference -->
 
 
 ## Talks
@@ -137,7 +137,7 @@ see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2025.pdf)** fo
 - ♟️ **Chess medalist** – Gold at BUCA Plate, and medals at various national/international tournaments  
 - ⚗️ **Olympiads** – Chemistry Olympiad (3rd in Vienna), Philosophy Olympiad finalist  
 - 💻 Built a **custom GPU rig** for deep learning + Linux sysadmin skills  
-- ⚙️ Deep into **CUDA & GPU programming** – trained via Oxford with [Prof. Mike Giles](https://people.maths.ox.ac.uk/gilesm/cuda/) & [NVIDIA certifications](https://learn.nvidia.com/certificates?id=SOEYjIXZTY-ZjB6xIhutDQ) 
+- ⚙️ Into **CUDA & GPU programming** – trained via Oxford University with [Prof. Mike Giles](https://people.maths.ox.ac.uk/gilesm/cuda/) and received an [Oxford University Certificate](https://nikolairozanov.com/files/oxford_university_CUDA_certificate.pdf) & and also via Imperial College London together with Nvidia where I received an [NVIDIA certification on multi-gpu CUDA programming](https://nikolairozanov.com/files/nvidia_certificate_multi_gpu.pdf) (or from the official website [Nvidia certificate](https://learn.nvidia.com/certificates?id=SOEYjIXZTY-ZjB6xIhutDQ) )
 - 🌍 Multilingual: German (native), English (fluent), Russian (fluent), French & Latin (basic)  
 - 🏒 Passionate about **ice hockey**, **sailing**, and **swimming**
 
