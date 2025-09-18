@@ -58,6 +58,16 @@
       {% if author.impactstory %}
         <li><a href="{{ author.impactstory }}" target="_blank" ><i class="ai ai-impactstory ai-fw icon-pad-right"></i>Impactstory</a></li>
       {% endif %}
+
+      {% if author.huggingface %}
+        <li><a href="https://www.huggingface.co/{{ author.huggingface }}" target="_blank" ><img src="{{base_url}}/images/huggingface-icon.svg" style="height:1em; width:1em;" aria-hidden="true" alt="Huggingface">&nbsp;&nbsp;&nbsp;Huggingface</a></li>
+      {% endif %} 
+      {% if author.stackoverflow %}
+        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" target="_blank" ><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stackoverflow</a></li>
+      {% endif %}  
+
+
+
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}" target="_blank" ><i class="ai ai-orcid ai-fw icon-pad-right"></i>0000-0003-0274-8832</a></li>
       {% endif %}
@@ -83,11 +93,8 @@
       {% endif %}      
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}" target="_blank" ><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
-      {% endif %}      
-      {% if author.stackoverflow %}
-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" target="_blank" ><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stackoverflow</a></li>
-      {% endif %}      
-
+      {% endif %}       
+<!-- class="icon-pad-right" style="height:1em; width:1em; -->
       <!-- Font Awesome icons / Social media -->
       {% if author.bluesky %}
         <li><a href="https://bsky.app/profile/{{ author.bluesky }}" target="_blank" ><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>ai-nikolai.bsky.social</a></li>

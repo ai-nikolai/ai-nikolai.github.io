@@ -74,6 +74,7 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
+  huggingface      : ai-nikolai
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
@@ -278,9 +279,9 @@ defaults:
   #     share: true
   #     comment: true
   # _talks
-  - scope:
-      path: ""
-      type: talks
+  # - scope:
+  #     path: ""
+  #     type: talks
   #   values:
   #     layout: talk
   #     author_profile: true
