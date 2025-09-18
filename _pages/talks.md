@@ -1,10 +1,7 @@
 ---
-permalink: /talks
 title: "Academic & Research talks:"
-excerpt: "Select Academic Talks of Nikolai Rozanov"
-# author_profile: true
-# redirect_from: 
-#   - /talks.html
+sitemap: false
+permalink: /talks
 ---
 <!-- Bismillahi Rahmani Raheem -->
 
