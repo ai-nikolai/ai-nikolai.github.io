@@ -10,6 +10,14 @@ permalink: /talks
 
 <hr style="height:1px;border-width:0;color:gray;background-color:gray">
 
+**"Modern LLMs - Part 1 (Architectures)"**
+\
+*MBZUAI, Abu Dhabi* on *15.10.2025* 
+> Summary and main innovations of LLM architectures, specifically for the attention and feed-forward components. Qwen3, Qwen3-Next, Kimi K2, DeepSeek V3, GPT-OSS, LongCat-Chat are all analysed in a bit more detail.
+>[Slides]({{ site.baseurl }}/files/reading_group_15_10_2025.pdf)
+
+<hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
 **"GSPO - RL Training of LLMs"**
 \
 *MBZUAI, Abu Dhabi* on *17.09.2025* 
@@ -17,6 +25,7 @@ permalink: /talks
 >[Slides]({{ site.baseurl }}/files/reading_group_17_09_2025.pdf)
 
 <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
 **"GRPO, DeepSeekMath & DeepSeek-R1"**
 \
 *Imperial College London, London* on *03.06.2025*
@@ -25,6 +34,7 @@ permalink: /talks
 
 
 <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
 **"Test time scaling."**
 \
 *Imperial College London, London* on *03.12.2024*
@@ -33,6 +43,7 @@ permalink: /talks
 
 
 <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
 **"Not all chain-of-thought are equal..."**
 \
 *Imperial College London, London* on *09.07.2024* 
@@ -42,6 +53,7 @@ permalink: /talks
 
 
 <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+
 **"Fantastic Prompts and where to find them (and a recent & brief history of LLMs)"** 
 \
 *Imperial College London, London* on *05.03.2024*
