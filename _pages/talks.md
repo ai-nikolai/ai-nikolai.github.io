@@ -13,7 +13,7 @@ permalink: /talks
 **"Modern LLM Tools - (vllm, unsloth and more)"**
 \
 *Nouakchott, Mauritania (remote)* on *21.10.2025* 
-> Summary and main innovations of LLM architectures, specifically for the attention and feed-forward components. Qwen3, Qwen3-Next, Kimi K2, DeepSeek V3, GPT-OSS, LongCat-Chat are all analysed in a bit more detail.
+> Latest tools in practice. Fine-tune a model with low resource Qlora (unsloth). Inference that LLM with efficient KV-Cache (vllm). And display a cool local chat LLM app with gradio and duckduck search API.
 > [Slides]({{ site.baseurl }}/files/i2comsapp_workshop_21_10_2025.pdf)
 > [Code](https://github.com/ai-nikolai/ai-tutorials/tree/main/llm_101)
 
