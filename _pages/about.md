@@ -146,7 +146,7 @@ see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2025.pdf)** fo
 
 - 🏆 **Forbes 30 Under 30** (European Technology) – for Wluper Ltd.  
 - ♟️ **Chess medalist** – Gold at BUCA Plate, and medals at various national/international tournaments  
-- ⚗️ **Olympiads** – Chemistry Olympiad (3rd in Vienna), Philosophy Olympiad finalist  
+- ⚗️ **Olympiads** – Regional Chemistry Olympiad (Bronze in Vienna), Regional Philosophy Olympiad (3rd Place in Vienna) 
 - 💻 Built a **custom GPU rig** for deep learning + Linux sysadmin skills  
 - ⚙️ Into **CUDA & GPU programming** – trained via Oxford University with [Prof. Mike Giles](https://people.maths.ox.ac.uk/gilesm/cuda/) and received an [Oxford University Certificate](https://nikolairozanov.com/files/oxford_university_CUDA_certificate.pdf) & and also via Imperial College London together with Nvidia where I received an [NVIDIA certification on multi-gpu CUDA programming](https://nikolairozanov.com/files/nvidia_certificate_multi_gpu.pdf) (or from the official website [Nvidia certificate](https://learn.nvidia.com/certificates?id=SOEYjIXZTY-ZjB6xIhutDQ) )
 - 🌍 Multilingual: German (native), English (fluent), Russian (fluent), French & Latin (basic)  
