@@ -17,11 +17,11 @@ Overview:
 
 * (Currently) From August 2025 - April 2026 I have the priviledge to also work with [Prof. Iryna Gurevych](https://mbzuai.ac.ae/study/faculty/iryna-gurevych/) and [Prof. Preslav Nakov](https://mbzuai.ac.ae/study/faculty/preslav-nakov/) at MBZUAI on KernelBench.
 
-* Previously, I was Senior Research Scientist, CTO and Co-Founder and various firms for 8 years. Leading R&D, research publications and grants.
+* Previously, I was Senior Research Scientist, CTO and Co-Founder in various firms for 8 years. Leading R&D, research publications and grants.
 
 * Machine Learning and Reasoning are incredible interesting to me and I often ponder: "Is true generalisation possible?" At the moment I am pursing LLMs, LLM Agents and RL as a way to explore this question.
 
-* Fundamentally, I am intersted in working to become a better person, understanding the Truth (as best we can) and God.
+* Fundamentally, I am intersted in working on becoming a better person, understanding the Truth (as best we can) and knowing God.
 
 ## News
 <!-- - [**2024.07**] Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep -->
