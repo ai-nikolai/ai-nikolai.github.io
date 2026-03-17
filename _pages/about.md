@@ -35,7 +35,7 @@ Overview:
 
 ## Summary of Experience
 
-I am senior machine learning scientist and an early stage academic (currently returned from Industry to do my PhD after roughly 8 years of industry experience in Machine Learning and NLP research). Overall, my experience spans the entire machine learning pipeline of business case scoping; dataset creation and annotation; pre-training, post-training and now LLM Agents and LLM Reasoning; as well as scaling and productionising ML systems. 
+I am senior machine learning scientist and an early stage academic (currently returned from industry to do my PhD after roughly 8 years of industry experience in Machine Learning and Natural Language Processing research). Overall, my experience spans the entire machine learning pipeline of business case scoping; dataset creation and annotation; pre-training, post-training and now LLM agents and LLM reasoning; as well as scaling and productionising ML systems. 
 
 During my industry experience, my roles ranged from Senior Research Scientist, Head of Research to CTO. I was also a co-founder of a London-based AI/NLP startup (back in 2016 before NLP was less known ;) ). Overall, I spent 8 years building practical AI systems and publishing research in major conferences. I led diverse teams and managed a £500K Innovate UK research grant, collaborating with leading academics including Prof. Iryna Gurevych.
 
