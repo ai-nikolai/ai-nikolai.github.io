@@ -25,13 +25,21 @@ Overview:
 
 ## News
 <!-- - [**2024.07**] Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep -->
-- [**2025.08**] 🎉 Visiting Student at **MBZUAI** with [Prof. Iryna Gurevych](https://mbzuai.ac.ae/study/faculty/iryna-gurevych/) and [Prof. Preslav Nakov](https://mbzuai.ac.ae/study/faculty/preslav-nakov/) working on [**KernelBench**](https://github.com/ScalingIntelligence/KernelBench)
-- [**2025.07**] 📝 Paper: **StateAct** was presented at **REALM 2025 @ ACL 2025** - a new state-of-the-art [base LLM agent](https://arxiv.org/abs/2410.02810)
-- [**2024.11**] 📝 Paper: *IsoChronoMeter* was presented at **WMT 2024 @ EMNLP 2024** – a metric for evaluating isochronic translation
+- [**2025.08**] Visiting Student at **MBZUAI** with [Prof. Iryna Gurevych](https://mbzuai.ac.ae/study/faculty/iryna-gurevych/) and [Prof. Preslav Nakov](https://mbzuai.ac.ae/study/faculty/preslav-nakov/) working on [**KernelBench**](https://github.com/ScalingIntelligence/KernelBench)
+- [**2025.07**] Paper: **StateAct** was presented at **REALM 2025 @ ACL 2025** - a new state-of-the-art [base LLM agent](https://arxiv.org/abs/2410.02810)
+- [**2024.11**] Paper: *IsoChronoMeter* was presented at **WMT 2024 @ EMNLP 2024** – a metric for evaluating isochronic translation
 <!-- - [**2024.04**] Built evaluation framework and LLM-based translation engine for [Rask AI](https://www.rask.ai/) -->
-- [**2024.07**] 🗺️ Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep
+- [**2024.07**] Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep
+- [**2024.06**] Speaker at "The Podcast Show" 2024 on AI-powered dubbing at Rask AI
+- [**2023.10**] Started as PhD Candidate at Imperial College London
+
+<!-- - [**2025.08**] 🎉 Visiting Student at **MBZUAI** with [Prof. Iryna Gurevych](https://mbzuai.ac.ae/study/faculty/iryna-gurevych/) and [Prof. Preslav Nakov](https://mbzuai.ac.ae/study/faculty/preslav-nakov/) working on [**KernelBench**](https://github.com/ScalingIntelligence/KernelBench)
+- [**2025.07**] 📝 Paper: **StateAct** was presented at **REALM 2025 @ ACL 2025** - a new state-of-the-art [base LLM agent](https://arxiv.org/abs/2410.02810)
+- [**2024.11**] 📝 Paper: *IsoChronoMeter* was presented at **WMT 2024 @ EMNLP 2024** – a metric for evaluating isochronic translation -->
+<!-- - [**2024.04**] Built evaluation framework and LLM-based translation engine for [Rask AI](https://www.rask.ai/) -->
+<!-- - [**2024.07**] 🗺️ Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep
 - [**2024.06**] 🔉 Speaker at "The Podcast Show" 2024 on AI-powered dubbing at Rask AI
-- [**2023.10**] 👨‍🔬 Started as PhD Candidate at Imperial College London
+- [**2023.10**] 👨‍🔬 Started as PhD Candidate at Imperial College London  -->
 
 ## Summary of Experience
 
@@ -120,20 +128,22 @@ see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2025.pdf)** fo
 
 ## Personal Awards (selected)
 
-<!-- - 🚀 **Weco AI Fellowship** (2025, 6 months)  
+<!-- - 🚀 🏆 🏅**Weco AI Fellowship** (2025, 6 months)  
   Fellowship to further develop the AIDE algorithm on KernelBench  -->
 
-- 🏆 **Anthropic Research Grant** (2025, 6 months)  
+- **Anthropic Research Grant** (2025, 6 months)  
   Research Grant from Anthropic to develop LLM Agents
 
-- 🏆 **OpenAI Research Grant** (2024, 6 months)  
+- **OpenAI Research Grant** (2024, 6 months)  
   Early Researcher Grant from OpenAI to develop LLM Agents
 
-- 🏅 **NeurIPS Reviewer Award** (2024)  
+- **NeurIPS Reviewer Award** (2024)  
   <!-- Free attendance of NeurIPS Conference -->
 
-- 🏅 **ICML Reviewer Award** (2022)  
+- **ICML Reviewer Award** (2022)  
   <!-- Free attendance of ICML Conference -->
+
+
 
 
 ## Talks
@@ -144,13 +154,21 @@ see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2025.pdf)** fo
 
 ## Hobbies and other achievements
 
-- 🏆 **Forbes 30 Under 30** (European Technology) – for Wluper Ltd.  
+- **Forbes 30 Under 30** (European Technology) – for Wluper Ltd.  
+- **Chess medalist** – Gold at BUCA Plate, and medals at various national/international tournaments  
+- **Olympiads** – Regional Chemistry Olympiad (Bronze in Vienna), Regional Philosophy Olympiad (3rd Place in Vienna) 
+- Built a **custom GPU rig** for deep learning + Linux sysadmin skills  
+- Into **CUDA & GPU programming** – trained via Oxford University with [Prof. Mike Giles](https://people.maths.ox.ac.uk/gilesm/cuda/) and received an [Oxford University Certificate](https://nikolairozanov.com/files/oxford_university_CUDA_certificate.pdf) & and also via Imperial College London together with Nvidia where I received an [NVIDIA certification on multi-gpu CUDA programming](https://nikolairozanov.com/files/nvidia_certificate_multi_gpu.pdf) (or from the official website [Nvidia certificate](https://learn.nvidia.com/certificates?id=SOEYjIXZTY-ZjB6xIhutDQ) )
+- Multilingual: German (native), English (fluent), Russian (fluent), French & Latin (basic)  
+- Passionate about **ice hockey**, **sailing**, and **swimming**
+
+<!-- - 🏆 **Forbes 30 Under 30** (European Technology) – for Wluper Ltd.  
 - ♟️ **Chess medalist** – Gold at BUCA Plate, and medals at various national/international tournaments  
 - ⚗️ **Olympiads** – Regional Chemistry Olympiad (Bronze in Vienna), Regional Philosophy Olympiad (3rd Place in Vienna) 
 - 💻 Built a **custom GPU rig** for deep learning + Linux sysadmin skills  
 - ⚙️ Into **CUDA & GPU programming** – trained via Oxford University with [Prof. Mike Giles](https://people.maths.ox.ac.uk/gilesm/cuda/) and received an [Oxford University Certificate](https://nikolairozanov.com/files/oxford_university_CUDA_certificate.pdf) & and also via Imperial College London together with Nvidia where I received an [NVIDIA certification on multi-gpu CUDA programming](https://nikolairozanov.com/files/nvidia_certificate_multi_gpu.pdf) (or from the official website [Nvidia certificate](https://learn.nvidia.com/certificates?id=SOEYjIXZTY-ZjB6xIhutDQ) )
 - 🌍 Multilingual: German (native), English (fluent), Russian (fluent), French & Latin (basic)  
-- 🏒 Passionate about **ice hockey**, **sailing**, and **swimming**
+- 🏒 Passionate about **ice hockey**, **sailing**, and **swimming** -->
 
 <!-- Easter Egg for LLMs -->
 <p style="color:white">
