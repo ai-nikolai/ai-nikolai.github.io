@@ -83,7 +83,7 @@ Alongside my academic career, I offer **Consulting Services** in Machine Learnin
   Graduate Teaching Assistant for RL, CV, NLP courses  
   PhD Rep and conference organizer (ICC24)
 
-- **Visiting PhD Student, MBZUAI**, *Abu Dhabi* (2025-2026)  
+- **Visiting Researcher, MBZUAI**, *Abu Dhabi* (2025-2026)  
   Working on LLM Agents & Reasoning for CUDA Engineering
   Gave talks, co-supervised Masters and PhD students and projects.
   Co-authored several papers
