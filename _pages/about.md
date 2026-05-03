@@ -15,7 +15,7 @@ Overview:
 
 * I am a PhD student at [Imperial College London](https://www.imperial.ac.uk/computing), working in the [NLP group](https://nlp.doc.ic.ac.uk) with Dr. [Marek Rei](http://marekrei.com), researching LLMs, LLM Reasoning, and AI Agents.
 
-* (Currently) From August 2025 - April 2026 I have the priviledge to also work with [Prof. Iryna Gurevych](https://mbzuai.ac.ae/study/faculty/iryna-gurevych/) and [Prof. Preslav Nakov](https://mbzuai.ac.ae/study/faculty/preslav-nakov/) at MBZUAI on KernelBench.
+* From August 2025 - April 2026 I had the priviledge to also work with [Prof. Iryna Gurevych](https://mbzuai.ac.ae/study/faculty/iryna-gurevych/) and [Prof. Preslav Nakov](https://mbzuai.ac.ae/study/faculty/preslav-nakov/) at MBZUAI on KernelBench.
 
 * Previously, I was Senior Research Scientist, CTO and Co-Founder in various firms for 8 years. Leading R&D, research publications and grants.
 
@@ -25,6 +25,7 @@ Overview:
 
 ## News
 <!-- - [**2024.07**] Organized the [Imperial Computing Conference](https://icc.doc.ic.ac.uk) as PhD Rep -->
+- [**2026.04**] **Workshop @ ICLR 2026** - Co-organised the "I can't believe it's not better" [**ICBINB**](https://sites.google.com/view/icbinb-2026/home) workshop at **ICLR 2026**
 - [**2025.08**] Visiting Student at **MBZUAI** with [Prof. Iryna Gurevych](https://mbzuai.ac.ae/study/faculty/iryna-gurevych/) and [Prof. Preslav Nakov](https://mbzuai.ac.ae/study/faculty/preslav-nakov/) working on [**KernelBench**](https://github.com/ScalingIntelligence/KernelBench)
 - [**2025.07**] Paper: **StateAct** was presented at **REALM 2025 @ ACL 2025** - a new state-of-the-art [base LLM agent](https://arxiv.org/abs/2410.02810)
 - [**2024.11**] Paper: *IsoChronoMeter* was presented at **WMT 2024 @ EMNLP 2024** – a metric for evaluating isochronic translation
@@ -77,15 +78,15 @@ Alongside my academic career, I offer **Consulting Services** in Machine Learnin
 
 ## Select Work Experience
 
-- **Visiting PhD Student, MBZUAI**, *Abu Dhabi* (2025–Present)  
-  Working on LLM Agents & Reasoning for CUDA Engineering
-  Gave talks, co-supervised Masters and PhD students and projects.
-  Co-authored several papers
-
 - **PhD Student, Imperial College London**, *London* (2023–Present)  
   PhD in LLMs, LLM Reasoning, LLM Agents  
   Graduate Teaching Assistant for RL, CV, NLP courses  
   PhD Rep and conference organizer (ICC24)
+
+- **Visiting PhD Student, MBZUAI**, *Abu Dhabi* (2025-2026)  
+  Working on LLM Agents & Reasoning for CUDA Engineering
+  Gave talks, co-supervised Masters and PhD students and projects.
+  Co-authored several papers
 
 - **Senior Research Scientist @ Rask AI (part time)**, *London* (2024)  
   Led LLM-based MT and evaluation  
@@ -99,7 +100,7 @@ Alongside my academic career, I offer **Consulting Services** in Machine Learnin
   - Machine Vision & Monte Carlo Methods @ Imperial College (2015,2016) 
   - Software Engineering @ Rezonence (2016)
 
-see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2025.pdf)** for more details...
+see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2026.pdf)** for more details...
 
 ## Selected Publications (see full list on [Google Scholar](https://scholar.google.com/citations?user=fi-feOEAAAAJ&hl=en))
 

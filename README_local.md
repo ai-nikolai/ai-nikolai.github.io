@@ -13,5 +13,9 @@ Changing Social Profile:
 2. Update: `_includes/author-profile.md` (lines: 64 etc.)
 3. (optional) move logo to: `/images`
 
+Changing CV:
+1. `_pages/about.md`
+2. `_includes/author-profile.html`
+
 Also:
  archive/_pages/markdown.md has some info.
