@@ -23,20 +23,20 @@ permalink: /conferences
   </article>
 
   <article class="entry-card">
-    <h2 class="entry-card__title">ICBINB: I Can't Believe It's Not Better</h2>
-    <p class="entry-card__meta">ICLR 2026 · Rio de Janeiro, Brazil · April 2026</p>
-    <p class="entry-card__links">
-      <span>Co-organiser</span>
-      <a href="https://sites.google.com/view/icbinb-2026/home">Workshop website</a>
-    </p>
-  </article>
-
-  <article class="entry-card">
     <h2 class="entry-card__title">ICC 26 — Imperial Computing Conference</h2>
     <p class="entry-card__meta">Imperial College London · June 2026</p>
     <p class="entry-card__links">
       <span>Organiser</span>
       <a href="https://icc.doc.ic.ac.uk">Conference website</a>
+    </p>
+  </article>
+
+  <article class="entry-card">
+    <h2 class="entry-card__title">ICBINB: I Can't Believe It's Not Better</h2>
+    <p class="entry-card__meta">ICLR 2026 · Rio de Janeiro, Brazil · April 2026</p>
+    <p class="entry-card__links">
+      <span>Co-organiser</span>
+      <a href="https://sites.google.com/view/icbinb-2026/home">Workshop website</a>
     </p>
   </article>
 

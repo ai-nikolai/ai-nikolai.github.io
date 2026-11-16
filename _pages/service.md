@@ -38,17 +38,18 @@ permalink: /service
 
 - **REALM 3: Third Workshop for Research on Agent Language Models** — EMNLP 2027 (accepted), location and date TBC — Co-organiser
 - **[REALM 2: Second Workshop for Research on Agent Language Models](https://realm-workshop.github.io)** — EMNLP 2026, Budapest — Co-organiser
-- **[ICBINB: I Can't Believe It's Not Better](https://sites.google.com/view/icbinb-2026/home)** — ICLR 2026, Rio de Janeiro — Co-organiser
 - **[ICC 26 — Imperial Computing Conference](https://icc.doc.ic.ac.uk)** — Imperial College London, June 2026 — Organiser
+- **[ICBINB: I Can't Believe It's Not Better](https://sites.google.com/view/icbinb-2026/home)** — ICLR 2026, Rio de Janeiro — Co-organiser
 - **[ICC 25 — Imperial Computing Conference](https://icc.doc.ic.ac.uk)** — Imperial College London, June 2025 — Organiser
 - **[ICC 24 — Imperial Computing Conference](https://icc.doc.ic.ac.uk)** — Imperial College London, June 2024 — Organiser
 
 ## Reviewing
 
-- **NeurIPS** — reviewer, 2020–2024 (Reviewer Award, 2024)
-- **ICML** — reviewer, 2019–2024 (most years; Reviewer Award, 2022)
-- **EMNLP / ACL / EACL** — reviewer, 2018–2020 (pre-ARR)
+- **NeurIPS** — reviewer, 2020–2024 and 2026–present (Reviewer Award, 2024)
+- **ICML** — reviewer, 2019–2024 and 2026–present (Reviewer Award, 2022)
 - **ACL Rolling Review (ARR)** — reviewer, 2021–present
+- **EMNLP / ACL / EACL** — reviewer, 2018–2020 (pre-ARR)
+- **Workshop reviewing** — 2018–present: REALM, ICBINB, DeeLIO, among others
 
 ## Community
 
