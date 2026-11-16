@@ -26,13 +26,19 @@ docker compose up
 | Path | Purpose |
 |---|---|
 | `_pages/about.md` | Homepage / about page |
+| `_pages/projects.md` | Open-source projects |
 | `_pages/talks.md` | Academic talks |
-| `_pages/conferences.md` | Conference and workshop organisation |
+| `_pages/conferences.md` | Conferences and workshops |
+| `_pages/service.md` | Academic service |
+| `_pages/blog.md` | Blog index |
+| `_posts/` | Blog posts |
 | `_data/navigation.yml` | Header navigation |
 | `_config.yml` | Site-wide settings, author profile, analytics |
+| `_sass/_custom.scss` | Typography and project card styles |
 | `files/` | PDFs (CV, slides, certificates) |
-| `images/` | Profile photo, social preview card, favicons, icons |
-| `_includes/head/custom.html` | Favicon, social preview, extra `<head>` tags |
+| `images/` | Profile photo, social preview card, favicons, project covers |
+| `_includes/seo.html` | SEO tags, canonical URLs, social preview, schema |
+| `_includes/head/custom.html` | Favicons and extra `<head>` tags |
 
 Use root-relative links (`{{ site.baseurl }}/files/...`) rather than absolute production URLs so local previews work.
 
@@ -43,3 +49,5 @@ Push to `master`. GitHub Pages builds the site and publishes it to the custom do
 ## Credits
 
 Theme: [Academic Pages](https://github.com/academicpages/academicpages.github.io), based on [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes). Both are MIT licensed; see `LICENSE`.
+
+Typography: [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible), self-hosted, licensed under the SIL Open Font License.
