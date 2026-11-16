@@ -1,6 +1,6 @@
 ---
-title: "Academic & Research talks:"
-sitemap: false
+title: "Academic & Research Talks"
+description: "Selected academic talks on LLMs, reinforcement learning, and AI agents, with slides and code."
 permalink: /talks
 ---
 <!-- Bismillahi Rahmani Raheem -->

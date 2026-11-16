@@ -1,7 +1,8 @@
 ---
 permalink: /
-title: "Nikolai Rozanov's Personal Page"
-excerpt: "Nikolai Rozanov's Personal Page"
+title: "Nikolai Rozanov"
+seo_title: "Nikolai Rozanov — LLM Agents & Reasoning"
+description: "CS PhD candidate at Imperial College London researching LLM agents, reasoning, and evaluation. Previously co-founder and CTO of a London-based AI start-up."
 author_profile: true
 redirect_from: 
   - /about/
@@ -100,13 +101,13 @@ Alongside my academic career, I offer **Consulting Services** in Machine Learnin
   - Machine Vision & Monte Carlo Methods @ Imperial College (2015,2016) 
   - Software Engineering @ Rezonence (2016)
 
-see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2026.pdf)** for more details...
+see my **[CV]({{ site.baseurl }}/files/CV_Nikolai_Rozanov_2026.pdf)** for more details...
 
 ## Selected Publications (see full list on [Google Scholar](https://scholar.google.com/citations?user=fi-feOEAAAAJ&hl=en))
 
 1. **StateAct: State Tracking and Reasoning with LLMs**  
    *REALM 2025 @ ACL 2025*
-    | [Paper](https://arxiv.org/abs/2410.02810), [Code](https://github.com/stateact) |
+    | [Paper](https://arxiv.org/abs/2410.02810), [Code](https://github.com/ai-nikolai/StateAct) |
 
 2. **IsoChronoMeter: Isochronic Translation Metric**  
    *WMT 2024 @ EMNLP 2024*
@@ -116,9 +117,9 @@ see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2026.pdf)** fo
    *EMNLP 2023*
   | [Paper](https://arxiv.org/abs/2310.15758)|
 
-5. **Adapter-Based Knowledge Injection**  
+4. **Adapter-Based Knowledge Injection**  
    *EMNLP 2020 (DeeLIO)*
-  | [Paper](https://arxiv.org/abs/2410.11127)|
+  | [Paper](https://arxiv.org/abs/2005.11787)|
 
 5. **Evolutionary Data Measures**  
    *CoNLL 2018*
@@ -159,7 +160,7 @@ see my **[CV](https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2026.pdf)** fo
 - **Chess medalist** – Gold at BUCA Plate, and medals at various national/international tournaments  
 - **Olympiads** – Regional Chemistry Olympiad (Bronze in Vienna), Regional Philosophy Olympiad (3rd Place in Vienna) 
 - Built a **custom GPU rig** for deep learning + Linux sysadmin skills  
-- Into **CUDA & GPU programming** – trained via Oxford University with [Prof. Mike Giles](https://people.maths.ox.ac.uk/gilesm/cuda/) and received an [Oxford University Certificate](https://nikolairozanov.com/files/oxford_university_CUDA_certificate.pdf) & and also via Imperial College London together with Nvidia where I received an [NVIDIA certification on multi-gpu CUDA programming](https://nikolairozanov.com/files/nvidia_certificate_multi_gpu.pdf) (or from the official website [Nvidia certificate](https://learn.nvidia.com/certificates?id=SOEYjIXZTY-ZjB6xIhutDQ) )
+- Into **CUDA & GPU programming** – trained via Oxford University with [Prof. Mike Giles](https://people.maths.ox.ac.uk/gilesm/cuda/) and received an [Oxford University Certificate]({{ site.baseurl }}/files/oxford_university_CUDA_certificate.pdf) & and also via Imperial College London together with Nvidia where I received an [NVIDIA certification on multi-gpu CUDA programming]({{ site.baseurl }}/files/nvidia_certificate_multi_gpu.pdf) (or from the official website [Nvidia certificate](https://learn.nvidia.com/certificates?id=SOEYjIXZTY-ZjB6xIhutDQ) )
 - Multilingual: German (native), English (fluent), Russian (fluent), French & Latin (basic)  
 - Passionate about **ice hockey**, **sailing**, and **swimming**
 

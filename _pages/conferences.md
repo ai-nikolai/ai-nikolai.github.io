@@ -1,6 +1,6 @@
 ---
-title: "Conference & Workshop Organisation:"
-sitemap: false
+title: "Conference & Workshop Organisation"
+description: "Conferences and workshops organized, including ICBINB at ICLR 2026 and REALM2 at EMNLP 2026."
 permalink: /conferences
 ---
 <!-- Bismillahi Rahmani Raheem -->

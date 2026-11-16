@@ -1,6 +1,7 @@
 ---
 title: "🐇"
 sitemap: false
+robots: "noindex, nofollow"
 permalink: /white-rabbit
 ---
 

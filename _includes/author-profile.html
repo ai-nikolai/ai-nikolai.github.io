@@ -1,10 +1,10 @@
 {% include base_path %}
 
-{% if page.author and site.data.authors[page.author] %}
+{% if page.author and site.data.authors and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person">
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
@@ -15,7 +15,7 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
+    <p class="author__name"><strong>{{ author.name }}</strong></p>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
@@ -50,7 +50,7 @@
         <li><a href="{{ author.arxiv }}" target="_blank" ><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
       {% endif %}      
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}" target="_blank" ><i class="ai ai-google-scholar icon-pad-right"></i>Nikolai Rozanov</a></li>
+        <li><a href="{{ author.googlescholar }}" target="_blank" ><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
       {% endif %}
       {% if author.semantic %}
         <li><a href="{{ author.semantic }}" target="_blank" ><i class="ai ai-semantic-scholar ai-fw icon-pad-right"></i>Semantic Scholar</a></li>
@@ -59,19 +59,19 @@
         <li><a href="{{ author.impactstory }}" target="_blank" ><i class="ai ai-impactstory ai-fw icon-pad-right"></i>Impactstory</a></li>
       {% endif %}
       {% if author.openreview %}
-        <li><a href="https://openreview.net/profile?id=~{{ author.openreview }}" target="_blank" ><img src="{{base_url}}/images/openreview_logo.png" style="height:1em; width:1em;" aria-hidden="true" alt="OpenReview.Net">&nbsp;&nbsp;&nbsp;Openreview</a></li>
+        <li><a href="https://openreview.net/profile?id=~{{ author.openreview }}" target="_blank" ><img src="{{ site.baseurl }}/images/openreview_logo.png" style="height:1em; width:1em;" aria-hidden="true" alt="OpenReview">&nbsp;&nbsp;&nbsp;OpenReview</a></li>
       {% endif %} 
       {% if author.huggingface %}
-        <li><a href="https://www.huggingface.co/{{ author.huggingface }}" target="_blank" ><img src="{{base_url}}/images/huggingface-icon.svg" style="height:1em; width:1em;" aria-hidden="true" alt="Huggingface">&nbsp;&nbsp;&nbsp;Huggingface</a></li>
+        <li><a href="https://www.huggingface.co/{{ author.huggingface }}" target="_blank" ><img src="{{ site.baseurl }}/images/huggingface-icon.svg" style="height:1em; width:1em;" aria-hidden="true" alt="Hugging Face">&nbsp;&nbsp;&nbsp;Hugging Face</a></li>
       {% endif %} 
       {% if author.stackoverflow %}
-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" target="_blank" ><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stackoverflow</a></li>
+        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" target="_blank" ><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stack Overflow</a></li>
       {% endif %}  
 
 
 
       {% if author.orcid %}
-        <li><a href="{{ author.orcid }}" target="_blank" ><i class="ai ai-orcid ai-fw icon-pad-right"></i>0000-0003-0274-8832</a></li>
+        <li><a href="{{ author.orcid }}" target="_blank" ><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
       {% endif %}
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}" target="_blank" ><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
@@ -170,7 +170,7 @@
       {% if author.zhihu %}
       <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}" target="_blank" ><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
       {% endif %}
-      <li><a href="https://nikolairozanov.com/files/CV_Nikolai_Rozanov_2026.pdf" target="_blank"> <i class="fa-regular fa-file icon-pad-right" aria-hidden="true"></i>Nikolai's CV</a></li>  
+      <li><a href="{{ site.baseurl }}/files/CV_Nikolai_Rozanov_2026.pdf" target="_blank" rel="noopener"> <i class="fa-regular fa-file icon-pad-right" aria-hidden="true"></i>Nikolai's CV</a></li>
     </ul>
   </div>
 </div>
